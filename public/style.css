@@ -1,0 +1,110 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 2em;
+    color: #3D3D3D;
+}
+.wrap {
+  max-width: 860px;
+  margin: 20px auto;
+  cursor: default;
+  padding: 10px;
+}
+h1 {
+    color: #0e6a8e;
+    text-align: center;
+}
+#webcamButton {
+  color: #fff;
+  background: #0e6a8e;
+  margin: 0 auto;
+  padding: 15px 35px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  display: block;
+  cursor: pointer;
+}
+
+video {
+    display: block;
+}
+
+section {
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+}
+
+.removed {
+  display: none;
+}
+
+.invisible {
+  display: none!important;
+}
+
+.camView {
+  position: relative;
+  width: calc(100% - 20px);
+  margin: 10px;
+  cursor: auto;
+}
+#demos {
+  margin-top: 30px;
+}
+
+.camView p {
+  position: absolute;
+  padding: 5px;
+  background-color: rgba(255, 111, 0, 0.85);
+  color: #FFF;
+  border: 1px dashed rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  font-size: 12px;
+}
+.highlighter {
+  background: rgba(0, 255, 0, 0.25);
+  border: 1px dashed #fff;
+  z-index: 1;
+  position: absolute;
+}
+
+
+.loaders-container {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.switchbox {
+  position: relative;
+  height: 80px;
+  animation: spin 2s infinite linear; 
+}
+.switchbox .switch {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  background: #1391c1;
+  border-radius: 20px;
+  animation: cross 2s infinite linear;
+}
+.switchbox .switch:nth-of-type(2) {
+  animation-delay: -1s;
+}
+
+@keyframes spin { 
+  100% { 
+    transform: rotate(360deg); 
+  } 
+} 
+@keyframes cross {
+  50% {
+    margin-left: 60px;
+  }
+}
